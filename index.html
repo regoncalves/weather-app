@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather forecast</title>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container-fluid border container-main">
+      <div class="row">
+        <div class="col">
+          <p class="text-center">
+            <span class="header" id="city"></span>
+          </p>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-4">
+          <p class="temper1" id="tempnow"></p>
+        </div>
+        <div class="col-4">
+          <p class="day1" id="today"></p>
+          <p class="emoji">⛅</p>
+        </div>
+        <div class="col-4">
+          <p class="day2" id="time"></p>
+          <p class="day2">Max 13ºC</p>
+          <p class="day2">Min 4ºC</p>
+        </div>
+      </div>
+      <br />
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card border-secondary mb-3" style="width: 8rem;">
+              <div class="card-body">
+                <h5 class="ctitle">Thursday</h5>
+                <p class="ctext">🌧️</p>
+                <p class="ctext">Max 13ºC</p>
+                <p class="ctext">Min 4ºC</p>
+                <p class="ctext">5% 💧</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-secondary mb-3" style="width: 8rem;">
+              <div class="card-body">
+                <h5 class="ctitle">Friday</h5>
+                <p class="ctext">🌧️</p>
+                <p class="ctext">Max 13ºC</p>
+                <p class="ctext">Min 4ºC</p>
+                <p class="ctext">5% 💧</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-secondary mb-3" style="width: 8rem;">
+              <div class="card-body">
+                <h5 class="ctitle">Saturday</h5>
+                <p class="ctext">🌧️</p>
+                <p class="ctext">Max 13ºC</p>
+                <p class="ctext">Min 4ºC</p>
+                <p class="ctext">5% 💧</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-secondary mb-3" style="width: 8rem;">
+              <div class="card-body">
+                <h5 class="ctitle">Sunday</h5>
+                <p class="ctext">🌧️</p>
+                <p class="ctext">Max 13ºC</p>
+                <p class="ctext">Min 4ºC</p>
+                <p class="ctext">5% 💧</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-secondary mb-3" style="width: 8rem;">
+              <div class="card-body">
+                <h5 class="ctitle">Monday</h5>
+                <p class="ctext">🌧️</p>
+                <p class="ctext">Max 13ºC</p>
+                <p class="ctext">Min 4ºC</p>
+                <p class="ctext">5% 💧</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-secondary mb-3" style="width: 8rem;">
+              <div class="card-body">
+                <h5 class="ctitle">Tuesday</h5>
+                <p class="ctext">🌧️</p>
+                <p class="ctext">Max 13ºC</p>
+                <p class="ctext">Min 4ºC</p>
+                <p class="ctext">5% 💧</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <a href="#" class="btn btn-light btn-outline-secondary btn-sm"
+              >Lisbon</a
+            >
+          </div>
+          <div class="col">
+            <a href="#" class="btn btn-light btn-outline-secondary btn-sm"
+              >Paris</a
+            >
+          </div>
+          <div class="col">
+            <a href="#" class="btn btn-light btn-outline-secondary btn-sm"
+              >London</a
+            >
+          </div>
+          <div class="col">
+            <a href="#" class="btn btn-light btn-outline-secondary btn-sm"
+              >Rio de Janeiro</a
+            >
+          </div>
+          <div class="col">
+            <a href="#" class="btn btn-light btn-outline-secondary btn-sm"
+              >New York</a
+            >
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <form>
+        <div class="row">
+          <div class="col-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter a city"
+              id="submit"
+            />
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-light btn-sm">🔍</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
