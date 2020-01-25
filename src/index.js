@@ -32,6 +32,12 @@ function replaceTemp(response) {
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#tempnow");
   temperatureElement.innerHTML = `${temperature}ºC`;
+  let temperatureMax = Math.round(response.data.main.temp_max);
+  let tempnowmaxElement = document.querySelector("#tempnowmaxima");
+  tempnowmaxElement.innerHTML = `Max ${temperatureMax}ºC`;
+  let temperatureMin = Math.round(response.data.main.temp_min);
+  let tempnowminElement = document.querySelector("#tempnowminima");
+  tempnowminElement.innerHTML = `Min ${temperatureMin}ºC`;
   document.querySelector("#city").innerHTML = response.data.name;
 }
 
