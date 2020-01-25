@@ -5,7 +5,7 @@ let minute = now.getMinutes();
 if (minute < 10) {
   minute = `0${minute}`;
 }
-time.innerHTML = `🕤 ${hour}:${minute}h`;
+time.innerHTML = ` Last updated ${hour}:${minute}h`;
 
 let days = ["Sun", "Mon", "Tue", "Wedn", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()];
