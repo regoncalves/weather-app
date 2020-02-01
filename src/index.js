@@ -5,7 +5,7 @@ let minute = now.getMinutes();
 if (minute < 10) {
   minute = `0${minute}`;
 }
-time.innerHTML = ` Last updated ${hour}:${minute}h`;
+time.innerHTML = `Updated ${hour}:${minute}h`;
 
 let days = ["Sun", "Mon", "Tue", "Wedn", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()];
@@ -39,6 +39,17 @@ function replaceTemp(response) {
   let tempnowminElement = document.querySelector("#tempnowminima");
   tempnowminElement.innerHTML = `Min ${temperatureMin}ºC`;
   document.querySelector("#city").innerHTML = response.data.name;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute(
+    "alt",
+    response.data.weather[0].description
+  );
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 function searchCity(city) {
